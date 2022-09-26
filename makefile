@@ -6,5 +6,3 @@ main.o: main.cpp
 
 clean:
 	rm *.o prog
-run:
-	./prog
