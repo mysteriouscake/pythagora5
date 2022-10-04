@@ -11,7 +11,7 @@ void reset(double a, double b, double c){
 }
 
 int askStatus(int status){
-	cout<<"keep running? [1/0]\n";
+	cout<<"keep running? 1 for yes, 0 for no...\n";
     //ask for if the user wants to keep running the program or not
     cin>>status;
     return status;
