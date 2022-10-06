@@ -77,7 +77,7 @@ int main()
 	    	}
 	    	reset(sideA, sideB, sideC);
 	    }
-        area = (sideA*sideB)/2
+        area = (sideA*sideB)/2;
         cout<<"area: "<<area<<'\n';
     }
     return 0;
