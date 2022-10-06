@@ -80,6 +80,7 @@ int main()
         area = (sideA*sideB)/2;
         cout<<"area: "<<area<<'\n';
         reset(sideA, sideB, sideC);
+        //BRO KEN
     }
     return 0;
 }
