@@ -22,6 +22,7 @@ int main()
     double sideA = 0.0;
     double sideB = 0.0;
     double sideC = 0.0; 
+    double area = 0.0;
 
     int status = 0;
 
@@ -76,6 +77,8 @@ int main()
 	    	}
 	    	reset(sideA, sideB, sideC);
 	    }
+        area = (sideA*sideB)/2
+        cout<<"area: "<<area<<'\n';
     }
     return 0;
 }
