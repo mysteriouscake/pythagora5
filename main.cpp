@@ -3,11 +3,12 @@
 #include <math.h>
 using namespace std;
 
-void reset(double a, double b, double c){
+void reset(double a, double b, double c, double area){
     //resets variables
     a=0;
     b=0;
     c=0;
+    area = 0;
 }
 
 int askStatus(int status){
