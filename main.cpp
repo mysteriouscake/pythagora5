@@ -65,7 +65,7 @@ int main()
         {
 	    	if(pow(sideC,2.0) == pow(sideA,2.0) + pow(sideB,2.0) || (round(pow(sideC,2.0)*10.0)) / 10.0 == (round(pow(sideA,2.0) * 10.0))/10.0 + (round(pow(sideB,2.0) * 10.0)) / 10.0)
             //TODO: make this more readable
-                //i think i fixed it
+            //i think i fixed it, but still on the table
             {
 	    		cout<<"Result: Yes\n";
 	    		status = askStatus(status);
@@ -79,6 +79,7 @@ int main()
 	    }
         area = (sideA*sideB)/2;
         cout<<"area: "<<area<<'\n';
+        reset(sideA, sideB, sideC);
     }
     return 0;
 }
