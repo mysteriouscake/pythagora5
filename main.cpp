@@ -18,7 +18,7 @@ int askStatus(int status){
 
 void printarea(double a, double b){
     double area = (a*b)/2;
-    cout<<"area: "<<area<<'\n';
+    std::cout<<"area: "<<area<<'\n';
 }
 
 int main()
