@@ -1,6 +1,7 @@
 #include <iostream>
 #include <cmath>
 #include <math.h>
+using namespace std;
 
 void reset(double a, double b, double c){
     //resets variables
