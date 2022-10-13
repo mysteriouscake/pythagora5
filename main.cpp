@@ -30,6 +30,9 @@ int main()
     int status = 0;
 
     status = askStatus(status);
+    if (status != 1){
+        std::cout<<"stop right there";
+    }
 
     while (status == 1)
     {
