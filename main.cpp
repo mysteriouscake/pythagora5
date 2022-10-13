@@ -1,7 +1,6 @@
 #include <iostream>
 #include <cmath>
 #include <math.h>
-using namespace std;
 
 void reset(double a, double b, double c){
     //resets variables
@@ -50,7 +49,7 @@ int main()
         if(sideC == 0)
         {
             sideC = pow(pow(sideA,2.0)+pow(sideB,2.0),0.5);
-            cout<<"result: "<<sideC<<'\n';
+            std::cout<<"result: "<<sideC<<'\n';
             printarea(sideA, sideB);
             reset(sideA, sideB, sideC);
 	        status = askStatus(status);
@@ -58,7 +57,7 @@ int main()
         else if(sideA == 0)
         {
             sideA = pow(pow(sideC, 2)-pow(sideB, 2), 0.5);
-            cout<<"result: "<<sideA<<'\n';
+            std::cout<<"result: "<<sideA<<'\n';
             printarea(sideA, sideB);
             reset(sideA, sideB, sideC);
 		    status = askStatus(status); 
@@ -66,7 +65,7 @@ int main()
         else if(sideB == 0)
         {
             sideB = pow(pow(sideC, 2)-pow(sideA, 2), 0.5);
-            cout<<"result: "<<sideB<<'\n';
+            std::cout<<"result: "<<sideB<<'\n';
             printarea(sideA, sideB);
             reset(sideA, sideB, sideC);
 	        status = askStatus(status);
