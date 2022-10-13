@@ -16,14 +16,11 @@ int askStatus(int status){
     return status;
 }
 
-<<<<<<< Updated upstream
-=======
 void printarea(double a, double b){
     double area = (a*b)/2;
     std::cout<<"area: "<<area<<'\n';
 }
 
->>>>>>> Stashed changes
 int main()
 {
     double sideA = 0.0;
@@ -49,36 +46,24 @@ int main()
         if(sideC == 0)
         {
             sideC = pow(pow(sideA,2.0)+pow(sideB,2.0),0.5);
-<<<<<<< Updated upstream
-            cout<<"result: "<<sideC<<'\n';
-=======
             std::cout<<"result: "<<sideC<<'\n';
             printarea(sideA, sideB);
->>>>>>> Stashed changes
             reset(sideA, sideB, sideC);
 	        status = askStatus(status);
         }
         else if(sideA == 0)
         {
             sideA = pow(pow(sideC, 2)-pow(sideB, 2), 0.5);
-<<<<<<< Updated upstream
-            cout<<"result: "<<sideA<<'\n';
-=======
             std::cout<<"result: "<<sideA<<'\n';
             printarea(sideA, sideB);
->>>>>>> Stashed changes
             reset(sideA, sideB, sideC);
 		    status = askStatus(status); 
         }
         else if(sideB == 0)
         {
             sideB = pow(pow(sideC, 2)-pow(sideA, 2), 0.5);
-<<<<<<< Updated upstream
-            cout<<"result: "<<sideB<<'\n';
-=======
             std::cout<<"result: "<<sideB<<'\n';
             printarea(sideA, sideB);
->>>>>>> Stashed changes
             reset(sideA, sideB, sideC);
 	        status = askStatus(status);
         }
@@ -86,7 +71,7 @@ int main()
         {
 	    	if(pow(sideC,2.0) == pow(sideA,2.0) + pow(sideB,2.0) || (round(pow(sideC,2.0)*10.0)) / 10.0 == (round(pow(sideA,2.0) * 10.0))/10.0 + (round(pow(sideB,2.0) * 10.0)) / 10.0)
             //TODO: make this more readable
-                //i think i fixed it
+            //i think i fixed it, but still on the table
             {
 	    		std::cout<<"Result: Yes\n";
 	    		status = askStatus(status);
