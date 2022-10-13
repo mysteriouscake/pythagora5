@@ -45,21 +45,21 @@ int main()
         {
             sideC = pow(pow(sideA,2.0)+pow(sideB,2.0),0.5);
             cout<<"result: "<<sideC<<'\n';
-            reset(sideA, sideB, sideC);
+            reset(sideA, sideB, sideC, area);
 	        status = askStatus(status);
         }
         else if(sideA == 0)
         {
             sideA = pow(pow(sideC, 2)-pow(sideB, 2), 0.5);
             cout<<"result: "<<sideA<<'\n';
-            reset(sideA, sideB, sideC);
+            reset(sideA, sideB, sideC, area);
 		    status = askStatus(status); 
         }
         else if(sideB == 0)
         {
             sideB = pow(pow(sideC, 2)-pow(sideA, 2), 0.5);
             cout<<"result: "<<sideB<<'\n';
-            reset(sideA, sideB, sideC);
+            reset(sideA, sideB, sideC, area);
 	        status = askStatus(status);
         }
 	    else
@@ -76,11 +76,11 @@ int main()
 	    		cout<<"Result: No\n";
 	    		status = askStatus(status);
 	    	}
-	    	reset(sideA, sideB, sideC);
+	    	reset(sideA, sideB, sideC, area);
 	    }
         area = (sideA*sideB)/2;
         cout<<"area: "<<area<<'\n';
-        reset(sideA, sideB, sideC);
+        reset(sideA, sideB, sideC, area);
         //BRO KEN
     }
     return 0;
