@@ -17,6 +17,11 @@ int askStatus(int status){
     return status;
 }
 
+void printarea(double a, double b){
+    double area = (a*b)/2;
+    cout<<"area: "<<area<<'\n';
+}
+
 int main()
 {
     double sideA = 0.0;
@@ -43,6 +48,7 @@ int main()
         {
             sideC = pow(pow(sideA,2.0)+pow(sideB,2.0),0.5);
             cout<<"result: "<<sideC<<'\n';
+            printarea(sideA, sideB);
             reset(sideA, sideB, sideC);
 	        status = askStatus(status);
         }
@@ -50,6 +56,7 @@ int main()
         {
             sideA = pow(pow(sideC, 2)-pow(sideB, 2), 0.5);
             cout<<"result: "<<sideA<<'\n';
+            printarea(sideA, sideB);
             reset(sideA, sideB, sideC);
 		    status = askStatus(status); 
         }
@@ -57,6 +64,7 @@ int main()
         {
             sideB = pow(pow(sideC, 2)-pow(sideA, 2), 0.5);
             cout<<"result: "<<sideB<<'\n';
+            printarea(sideA, sideB);
             reset(sideA, sideB, sideC);
 	        status = askStatus(status);
         }
@@ -64,7 +72,7 @@ int main()
         {
 	    	if(pow(sideC,2.0) == pow(sideA,2.0) + pow(sideB,2.0) || (round(pow(sideC,2.0)*10.0)) / 10.0 == (round(pow(sideA,2.0) * 10.0))/10.0 + (round(pow(sideB,2.0) * 10.0)) / 10.0)
             //TODO: make this more readable
-                //i think i fixed it
+            //i think i fixed it, but still on the table
             {
 	    		cout<<"Result: Yes\n";
 	    		status = askStatus(status);
