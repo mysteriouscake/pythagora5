@@ -3,12 +3,11 @@
 #include <math.h>
 using namespace std;
 
-void reset(double a, double b, double c, double area){
+void reset(double a, double b, double c){
     //resets variables
     a=0;
     b=0;
     c=0;
-    area = 0;
 }
 
 int askStatus(int status){
@@ -18,12 +17,16 @@ int askStatus(int status){
     return status;
 }
 
+void printarea(double a, double b){
+    double area = (a*b)/2;
+    cout<<"area: "<<area<<'\n';
+}
+
 int main()
 {
     double sideA = 0.0;
     double sideB = 0.0;
     double sideC = 0.0; 
-    double area = 0.0;
 
     int status = 0;
 
@@ -45,21 +48,24 @@ int main()
         {
             sideC = pow(pow(sideA,2.0)+pow(sideB,2.0),0.5);
             cout<<"result: "<<sideC<<'\n';
-            reset(sideA, sideB, sideC, area);
+            printarea(sideA, sideB);
+            reset(sideA, sideB, sideC);
 	        status = askStatus(status);
         }
         else if(sideA == 0)
         {
             sideA = pow(pow(sideC, 2)-pow(sideB, 2), 0.5);
             cout<<"result: "<<sideA<<'\n';
-            reset(sideA, sideB, sideC, area);
+            printarea(sideA, sideB);
+            reset(sideA, sideB, sideC);
 		    status = askStatus(status); 
         }
         else if(sideB == 0)
         {
             sideB = pow(pow(sideC, 2)-pow(sideA, 2), 0.5);
             cout<<"result: "<<sideB<<'\n';
-            reset(sideA, sideB, sideC, area);
+            printarea(sideA, sideB);
+            reset(sideA, sideB, sideC);
 	        status = askStatus(status);
         }
 	    else
@@ -76,12 +82,8 @@ int main()
 	    		cout<<"Result: No\n";
 	    		status = askStatus(status);
 	    	}
-	    	reset(sideA, sideB, sideC, area);
+	    	reset(sideA, sideB, sideC);
 	    }
-        area = (sideA*sideB)/2;
-        cout<<"area: "<<area<<'\n';
-        reset(sideA, sideB, sideC, area);
-        //BRO KEN
     }
     return 0;
 }
