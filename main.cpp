@@ -18,7 +18,7 @@ int askStatus(int status){
 
 void printarea(double a, double b){
     double area = (a*b)/2;
-    std::cout<<"area: "<<area<<'\n';
+    cout<<"area: "<<area<<'\n';
 }
 
 int main()
@@ -49,7 +49,7 @@ int main()
         if(sideC == 0)
         {
             sideC = pow(pow(sideA,2.0)+pow(sideB,2.0),0.5);
-            std::cout<<"result: "<<sideC<<'\n';
+            cout<<"result: "<<sideC<<'\n';
             printarea(sideA, sideB);
             reset(sideA, sideB, sideC);
 	        status = askStatus(status);
@@ -57,16 +57,14 @@ int main()
         else if(sideA == 0)
         {
             sideA = pow(pow(sideC, 2)-pow(sideB, 2), 0.5);
-            std::cout<<"result: "<<sideA<<'\n';
-            printarea(sideA, sideB);
+            cout<<"result: "<<sideA<<'\n';
             reset(sideA, sideB, sideC);
 		    status = askStatus(status); 
         }
         else if(sideB == 0)
         {
             sideB = pow(pow(sideC, 2)-pow(sideA, 2), 0.5);
-            std::cout<<"result: "<<sideB<<'\n';
-            printarea(sideA, sideB);
+            cout<<"result: "<<sideB<<'\n';
             reset(sideA, sideB, sideC);
 	        status = askStatus(status);
         }
@@ -74,7 +72,7 @@ int main()
         {
 	    	if(pow(sideC,2.0) == pow(sideA,2.0) + pow(sideB,2.0) || (round(pow(sideC,2.0)*10.0)) / 10.0 == (round(pow(sideA,2.0) * 10.0))/10.0 + (round(pow(sideB,2.0) * 10.0)) / 10.0)
             //TODO: make this more readable
-            //i think i fixed it, but still on the table
+                //i think i fixed it
             {
 	    		std::cout<<"Result: Yes\n";
 	    		status = askStatus(status);
