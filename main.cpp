@@ -1,7 +1,6 @@
 #include <iostream>
 #include <cmath>
 #include <math.h>
-using namespace std;
 
 void reset(double a, double b, double c){
     //resets variables
@@ -11,12 +10,20 @@ void reset(double a, double b, double c){
 }
 
 int askStatus(int status){
-	cout<<"keep running? 1 for yes, 0 for no...\n";
+	std::cout<<"keep running? 1 for yes, 0 for no...\n";
     //ask for if the user wants to keep running the program or not
-    cin>>status;
+    std::cin>>status;
     return status;
 }
 
+<<<<<<< Updated upstream
+=======
+void printarea(double a, double b){
+    double area = (a*b)/2;
+    std::cout<<"area: "<<area<<'\n';
+}
+
+>>>>>>> Stashed changes
 int main()
 {
     double sideA = 0.0;
@@ -30,33 +37,48 @@ int main()
     while (status == 1)
     {
         //ask side a
-        cout<<"enter side a (leave 0 if unknown)\n";
-        cin>>sideA;
+        std::cout<<"enter side a (leave 0 if unknown)\n";
+        std::cin>>sideA;
         //ask side b
-        cout<<"enter side b (leave 0 if unknown)\n";
-        cin>>sideB;
+        std::cout<<"enter side b (leave 0 if unknown)\n";
+        std::cin>>sideB;
         //ask side c
-        cout<<"enter side c (leave 0 if unknown)\n";
-        cin>>sideC;
+        std::cout<<"enter side c (leave 0 if unknown)\n";
+        std::cin>>sideC;
 
         if(sideC == 0)
         {
             sideC = pow(pow(sideA,2.0)+pow(sideB,2.0),0.5);
+<<<<<<< Updated upstream
             cout<<"result: "<<sideC<<'\n';
+=======
+            std::cout<<"result: "<<sideC<<'\n';
+            printarea(sideA, sideB);
+>>>>>>> Stashed changes
             reset(sideA, sideB, sideC);
 	        status = askStatus(status);
         }
         else if(sideA == 0)
         {
             sideA = pow(pow(sideC, 2)-pow(sideB, 2), 0.5);
+<<<<<<< Updated upstream
             cout<<"result: "<<sideA<<'\n';
+=======
+            std::cout<<"result: "<<sideA<<'\n';
+            printarea(sideA, sideB);
+>>>>>>> Stashed changes
             reset(sideA, sideB, sideC);
 		    status = askStatus(status); 
         }
         else if(sideB == 0)
         {
             sideB = pow(pow(sideC, 2)-pow(sideA, 2), 0.5);
+<<<<<<< Updated upstream
             cout<<"result: "<<sideB<<'\n';
+=======
+            std::cout<<"result: "<<sideB<<'\n';
+            printarea(sideA, sideB);
+>>>>>>> Stashed changes
             reset(sideA, sideB, sideC);
 	        status = askStatus(status);
         }
@@ -66,12 +88,12 @@ int main()
             //TODO: make this more readable
                 //i think i fixed it
             {
-	    		cout<<"Result: Yes\n";
+	    		std::cout<<"Result: Yes\n";
 	    		status = askStatus(status);
 	    	}
 	    	else
             {
-	    		cout<<"Result: No\n";
+	    		std::cout<<"Result: No\n";
 	    		status = askStatus(status);
 	    	}
 	    	reset(sideA, sideB, sideC);
