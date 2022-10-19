@@ -10,7 +10,7 @@ void reset(double a, double b, double c){
 }
 
 int askStatus(int status){
-	std::cout<<"keep running? 1 for yes, 0 for no...\n";
+	std::cout<<"1 yay 2 naur\n";
     //ask for if the user wants to keep running the program or not
     std::cin>>status;
     return status;
