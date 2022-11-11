@@ -10,7 +10,7 @@ void reset(double a, double b, double c){
 }
 
 int askStatus(int status){
-	std::cout<<"1 yay 2 naur\n";
+	std::cout<<"1 yes 2 no\n";
     //ask for if the user wants to keep running the program or not
     std::cin>>status;
     return status;
@@ -31,7 +31,7 @@ int main()
 
     status = askStatus(status);
     if (status != 1){
-        std::cout<<"stop right there";
+        std::cout<<"stop right there criminal scum";
     }
 
     while (status == 1)
