@@ -31,7 +31,8 @@ int main()
 
     status = askStatus(status);
     if (status != 1){
-        std::cout<<"stop right there criminal scum";
+        std::cout<<"Unknown answer, aborting program.";
+        return 0;
     }
 
     while (status == 1)
