@@ -1,6 +1,5 @@
 #include <iostream>
 #include <cmath>
-#include <math.h>
 
 void reset(double a, double b, double c){
     //resets variables
