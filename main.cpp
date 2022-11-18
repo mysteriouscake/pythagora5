@@ -30,7 +30,7 @@ int main()
     int status = 0;
 
     status = askStatus(status);
-    if (status != 1){
+    if (status != 1 && status != 2){
         std::cout<<"Unknown answer, aborting program.";
         return 0;
     }
