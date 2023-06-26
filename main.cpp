@@ -9,7 +9,7 @@ void reset(double a, double b, double c){
 }
 
 int askStatus(int status){
-	std::cout<<"1 yes 2 no\n";
+	std::cout<<"1 go 2 stop\n";
     //ask for if the user wants to keep running the program or not
     std::cin>>status;
     return status;
@@ -17,7 +17,7 @@ int askStatus(int status){
 
 void printarea(double a, double b){
     double area = (a*b)/2;
-    std::cout<<"area: "<<area<<'\n';
+    std::cout<<"Area: "<<area<<'\n';
 }
 
 int main()
@@ -49,7 +49,7 @@ int main()
         if(sideC == 0)
         {
             sideC = pow(pow(sideA,2.0)+pow(sideB,2.0),0.5);
-            std::cout<<"result: "<<sideC<<'\n';
+            std::cout<<"Result: "<<sideC<<'\n';
             printarea(sideA, sideB);
             reset(sideA, sideB, sideC);
 	        status = askStatus(status);
@@ -57,7 +57,7 @@ int main()
         else if(sideA == 0)
         {
             sideA = pow(pow(sideC, 2)-pow(sideB, 2), 0.5);
-            std::cout<<"result: "<<sideA<<'\n';
+            std::cout<<"Result: "<<sideA<<'\n';
             printarea(sideA, sideB);
             reset(sideA, sideB, sideC);
 		    status = askStatus(status); 
@@ -65,7 +65,7 @@ int main()
         else if(sideB == 0)
         {
             sideB = pow(pow(sideC, 2)-pow(sideA, 2), 0.5);
-            std::cout<<"result: "<<sideB<<'\n';
+            std::cout<<"Result: "<<sideB<<'\n';
             printarea(sideA, sideB);
             reset(sideA, sideB, sideC);
 	        status = askStatus(status);
