@@ -8,13 +8,6 @@ void reset(double a, double b, double c){
     c=0;
 }
 
-int askStatus(int status){
-	std::cout<<"1 go 2 stop\n";
-    //ask for if the user wants to keep running the program or not
-    std::cin>>status;
-    return status;
-}
-
 void printarea(double a, double b){
     double area = (a*b)/2;
     std::cout<<"Area: "<<area<<'\n';
@@ -26,16 +19,6 @@ int main()
     double sideB = 0.0;
     double sideC = 0.0; 
 
-    int status = 0;
-
-    status = askStatus(status);
-    if (status != 1 && status != 2){
-        std::cout<<"Unknown answer, aborting program.";
-        return 0;
-    }
-
-    while (status == 1)
-    {
         //ask side a
         std::cout<<"enter side a (leave 0 if unknown)\n";
         std::cin>>sideA;
@@ -52,7 +35,6 @@ int main()
             std::cout<<"Result: "<<sideC<<'\n';
             printarea(sideA, sideB);
             reset(sideA, sideB, sideC);
-	        status = askStatus(status);
         }
         else if(sideA == 0)
         {
@@ -60,7 +42,6 @@ int main()
             std::cout<<"Result: "<<sideA<<'\n';
             printarea(sideA, sideB);
             reset(sideA, sideB, sideC);
-		    status = askStatus(status); 
         }
         else if(sideB == 0)
         {
@@ -68,7 +49,6 @@ int main()
             std::cout<<"Result: "<<sideB<<'\n';
             printarea(sideA, sideB);
             reset(sideA, sideB, sideC);
-	        status = askStatus(status);
         }
 	    else
         {
@@ -77,15 +57,12 @@ int main()
             //i think i fixed it, but still on the table
             {
 	    		std::cout<<"Result: Yes\n";
-	    		status = askStatus(status);
 	    	}
 	    	else
             {
 	    		std::cout<<"Result: No\n";
-	    		status = askStatus(status);
 	    	}
 	    	reset(sideA, sideB, sideC);
 	    }
-    }
     return 0;
 }
