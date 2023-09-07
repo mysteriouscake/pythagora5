@@ -52,7 +52,7 @@ int main()
         }
 	    else
         {
-	    	if(pow(sideC,2.0) == pow(sideA,2.0) + pow(sideB,2.0) || (round(pow(sideC,2.0)*10.0)) / 10.0 == (round(pow(sideA,2.0) * 10.0))/10.0 + (round(pow(sideB,2.0) * 10.0)) / 10.0)
+	    	if(pow(sideC,2.0) == pow(sideA,2.0) + pow(sideB,2.0) || (round(pow(sideC,2.0)*10.0)) / 10.0 == (round(pow(sideA,2.0) * 10.0)) / 10.0 + (round(pow(sideB,2.0) * 10.0)) / 10.0)
             {
 	    		std::cout<<"Result: Yes\n";
 	    	}
